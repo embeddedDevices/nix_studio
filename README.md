@@ -13,7 +13,7 @@ cp /pfad/zu/deiner/hardware_thinkpad.nix ./hardware-configuration.nix
 git init
 git add .
 git commit -m "Studio-Setup"
-git remote add origin git@github.com:DEINUSER/nix-workshop.git
+git remote add origin git@github.com:embeddedDevices/nix_studio.git
 git push -u origin main
 ```
 
