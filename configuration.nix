@@ -35,16 +35,32 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
+  # Von Pipewire fuer Realtime-Scheduling benoetigt (verhindert Audio-Aussetzer).
+  security.rtkit.enable = true;
 
   #-- 5. PROGRAMME
   # Zoom ist unfree -> muss erlaubt werden
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    htop
     vim
     wget
+    git
+
+    gnome-tweaks
+    gnome-extension-manager
+
     firefox
-    zoom-us   # Zoom Workplace Client
+    spotify
+    libreoffice
+    pdfarranger
+    keepassxc
+    nextcloud-client
+    nextcloud-talk-desktop
+
+    zoom-us # Zoom Workplace Client
+    signal-desktop
   ];
 
   #-- 6. USER
